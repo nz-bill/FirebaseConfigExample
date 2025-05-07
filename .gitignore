@@ -1,0 +1,64 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcsettings
+!default.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# SwiftPM
+.build/
+Package.resolved
+
+# User-specific
+*.swp
+*.lock
+*.DS_Store
+*.idea/
+*.moved-aside
+*.xcuserdatad/
+*.orig
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Firebase / Hemligheter
+Secrets.plist
+GoogleService-Info.plist
+
+# XCFrameworks
+*.xcframework
+
+# SPm artifact cache
+.swiftpm/xcode/package-artifacts/
+
+# Asset catalog compilations
+*.xcassets
+
+# Environment files
+.env
+*.env
+
+# Simulator logs and caches
+coreSimulator/
+

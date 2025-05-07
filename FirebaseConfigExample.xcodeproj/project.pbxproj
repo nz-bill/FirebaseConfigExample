@@ -10,6 +10,7 @@
 		E58398F62DCB50FF00FF62DE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E58398F52DCB50FF00FF62DE /* FirebaseAuth */; };
 		E58398F82DCB50FF00FF62DE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E58398F72DCB50FF00FF62DE /* FirebaseCore */; };
 		E58398FA2DCB50FF00FF62DE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E58398F92DCB50FF00FF62DE /* FirebaseFirestore */; };
+		E58399002DCB56EB00FF62DE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E58398FF2DCB568400FF62DE /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		E58398C22DCB4D5600FF62DE /* FirebaseConfigExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseConfigExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58398D72DCB4D5900FF62DE /* FirebaseConfigExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseConfigExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58398E12DCB4D5A00FF62DE /* FirebaseConfigExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseConfigExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58398FF2DCB568400FF62DE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,6 +86,7 @@
 		E58398B92DCB4D5600FF62DE = {
 			isa = PBXGroup;
 			children = (
+				E58398FF2DCB568400FF62DE /* .gitignore */,
 				E58398C42DCB4D5600FF62DE /* FirebaseConfigExample */,
 				E58398DA2DCB4D5A00FF62DE /* FirebaseConfigExampleTests */,
 				E58398E42DCB4D5A00FF62DE /* FirebaseConfigExampleUITests */,
@@ -227,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58399002DCB56EB00FF62DE /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
