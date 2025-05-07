@@ -11,6 +11,9 @@
 		E58398F82DCB50FF00FF62DE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E58398F72DCB50FF00FF62DE /* FirebaseCore */; };
 		E58398FA2DCB50FF00FF62DE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E58398F92DCB50FF00FF62DE /* FirebaseFirestore */; };
 		E58399002DCB56EB00FF62DE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E58398FF2DCB568400FF62DE /* .gitignore */; };
+		E58399022DCB59EE00FF62DE /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E58399012DCB59EE00FF62DE /* Secrets.plist */; };
+		E58399062DCB5F3E00FF62DE /* Secrets.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = E58399052DCB5F3E00FF62DE /* Secrets.example.plist */; };
+		E58399082DCB60B600FF62DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E58399072DCB60B600FF62DE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		E58398D72DCB4D5900FF62DE /* FirebaseConfigExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseConfigExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58398E12DCB4D5A00FF62DE /* FirebaseConfigExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseConfigExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58398FF2DCB568400FF62DE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E58399012DCB59EE00FF62DE /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		E58399052DCB5F3E00FF62DE /* Secrets.example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.example.plist; sourceTree = "<group>"; };
+		E58399072DCB60B600FF62DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,11 +92,14 @@
 		E58398B92DCB4D5600FF62DE = {
 			isa = PBXGroup;
 			children = (
+				E58399012DCB59EE00FF62DE /* Secrets.plist */,
+				E58399052DCB5F3E00FF62DE /* Secrets.example.plist */,
 				E58398FF2DCB568400FF62DE /* .gitignore */,
 				E58398C42DCB4D5600FF62DE /* FirebaseConfigExample */,
 				E58398DA2DCB4D5A00FF62DE /* FirebaseConfigExampleTests */,
 				E58398E42DCB4D5A00FF62DE /* FirebaseConfigExampleUITests */,
 				E58398C32DCB4D5600FF62DE /* Products */,
+				E58399072DCB60B600FF62DE /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58399022DCB59EE00FF62DE /* Secrets.plist in Resources */,
+				E58399062DCB5F3E00FF62DE /* Secrets.example.plist in Resources */,
 				E58399002DCB56EB00FF62DE /* .gitignore in Resources */,
+				E58399082DCB60B600FF62DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
