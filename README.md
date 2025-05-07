@@ -192,4 +192,64 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-8. <B>OBS!</B> Vissa firebasefunktioner som exempelvis Google Analytics vill fortfarande ha en GoogleService-Info.plist, så denna metod funkar inte i dessa fall   
+8. <B>OBS!</B> Vissa firebasefunktioner som exempelvis Google Analytics vill fortfarande ha en GoogleService-Info.plist, så denna metod funkar inte i dessa fall
+
+---
+## Ta bort känslig data från tidigare commits
+Låt säga att du har hunnit göra ett par commits innan du pushar upp till github och först då upptäcker att github varnar om känsliga läckor.
+
+Om det skedde i den senaste commiten så är det oftast ingen fara. Man kan alltid reverta till det senaste steget utan större problem.
+Svårare blir det om de känsliga filerna ligger kvar i historiken från flera commits tidigare. 
+
+Lyckligtvis så är ju detta ett relativt vanligt fenomen, och det innebär ju att det finns en hel del människor som klurat ut lösningar och skapat verktyg som vi kan använda oss av.
+
+Det finns inget direkt sätt att rensa historiken uppe på github, men det finns metoder att rensa historiken lokalt med git. Detta kan vi då kombinera genom att rensa historiken lokalt i git och sen göra en forced push till github. <br>
+**OBS** Detta är inte helt smärtfritt om man jobbar flera i samma repo, så var försiktig med denna metod om ni har kommit långt i projektet.
+
+
+
+För att rensa filen från hela Git-historiken (rekommenderas vid API-nycklar) kan vi använda ett tredjepartsverktyg till git som heter git filter-repo 
+
+```bash
+# Installera först om du inte har det:
+brew install git-filter-repo
+
+# Kör detta i projektroten:
+git filter-repo --path GoogleService-Info.plist --invert-paths
+```
+
+Detta tar bort filen från hela historiken, alla commits där den funnits.
+
+Sen pushar du med force:
+
+```bash
+
+git push origin --force
+```
+
+⚠️ Varning:
+Alla som har klonat repositoriet måste också göra en --force pull eller klona om, annars får de problem.
+API-nycklar bör också roteras i Firebase ifall filen hunnit bli publik.
+
+---
+### Command not found: brew
+Det betyder att du inte har Homebrew installerat – vilket är vanligt om du inte installerat det manuellt ännu. Homebrew är pakethanteraren för macOS och behövs för att installera saker som git-filter-repo.
+Den är communityskapad och därför hittar du den inte på appstore utan du behöver installera den från termnalen eftersom den behöver vissa systemrättigheter som appstore inte tillåter för tredjepartsappar
+
+#### Såhär installerar du Homebrew säkert (rekomenderad metod)
+
+Kopiera och kör detta var som helstifrån i terminalen:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+```
+Den här installerar Homebrew på rätt sätt, direkt från den officiella källan på GitHub.
+
+Det tar några minuter. Under installationen kommer det:
+
+- Be om ditt Mac-lösenord (det syns inte när du skriver, men skriv ändå och tryck Enter)
+- Visa instruktioner om att lägga till Homebrew i din PATH – följ dem
+
+När homebrew är installerat kan du gå tillbaka och fortsätta installera git-filter-repo
+
