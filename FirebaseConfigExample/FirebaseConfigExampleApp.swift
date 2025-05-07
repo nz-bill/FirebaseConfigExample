@@ -11,8 +11,15 @@ import FirebaseCore
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+      
+//     1. om du använder standardconfiurering med GoogleService-Info.plist:
+      
 //    FirebaseApp.configure()
+      
+//     2. om du INTE vill använda en GoogleService-Info.plist till konfigurering:
       configureFirebase()
+      
+      
     return true
   }
     
@@ -38,7 +45,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //        options.clientID = dict["CLIENT_ID"] as? String
 
 
-        //nu kan vi skicka in våra options när vi anropar .configure
+        //nu kan vi skicka in våra options när vi anropar FirebaseApp.configure()
         FirebaseApp.configure(options: options)
     }
 }

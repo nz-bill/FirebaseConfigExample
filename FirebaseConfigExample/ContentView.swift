@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import FirebaseFirestore
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -35,6 +36,11 @@ struct ContentView: View {
                 ToolbarItem {
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
+                    }
+                }
+                ToolbarItem{
+                    Button(action: testFirebaseConnection){
+                        Text("test")
                     }
                 }
             }
@@ -71,6 +77,24 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }
+    
+    private func testFirebaseConnection(){
+        // Get a reference to your Firestore database
+        let db = Firestore.firestore()
+
+        // Create a dictionary for the data you want to write
+        let testData = ["status": "connection_test_ok", "timestamp": FieldValue.serverTimestamp()] as [String : Any]
+
+        // Specify a collection and document (you can make up a test one)
+        db.collection("connectionTests").document("testDoc").setData(testData) { error in
+            if let error = error {
+                print("Error writing to Firestore: \(error.localizedDescription)")
+            } else {
+                print("Successfully wrote to Firestore! Check the console!")
+            }
+        }
+
     }
 }
 
